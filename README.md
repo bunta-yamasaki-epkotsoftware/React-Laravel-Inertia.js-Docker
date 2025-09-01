@@ -31,7 +31,7 @@
 4. **laravelをインストール**  
    PHPを使って、Laravelというツールをセットアップ（インストール）します。
    ```
-   composer create-project --prefer-dist laravel/laravel my-app
+   composer create-project --prefer-dist laravel/laravel=11 my-app
    ```
 
 5. **phpコンテナから出る**  
@@ -61,4 +61,17 @@
    更新した設定で、もう一度プログラムを起動します。
    ```
    docker compose up -d
+   ```
+
+8. 書き込み権限を追加
+   ```
+   docker exec -it myapp-php bash
+   chmod -R 777 /var/www/storage
+   chmod -R 777 /var/www/bootstrap/cache
+   ```
+   
+9. 再度マイグレーションを実行
+   ```
+   docker exec -it myapp-php bash
+   php artisan migrate
    ```
