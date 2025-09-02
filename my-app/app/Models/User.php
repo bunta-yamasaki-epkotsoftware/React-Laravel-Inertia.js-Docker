@@ -44,4 +44,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Reviewモデルとのリレーション
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
