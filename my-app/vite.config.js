@@ -11,9 +11,9 @@ export default defineConfig({
         react(),
     ],
     server: {
-        host: '0.0.0.0',
-        port: 5173,
-        hmr: { host: 'localhost', protocol: 'ws', clientPort: 5173 },
-        watch: { usePolling: true, interval: 300 }, // 重要: ポーリング監視
+        host: 'localhost',
+        port: 5174,
+        strictPort: true,
+        hmr: { host: 'localhost', clientPort: 5174 },
     },
 });

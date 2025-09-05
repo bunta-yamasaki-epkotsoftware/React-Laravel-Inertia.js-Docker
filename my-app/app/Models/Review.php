@@ -17,6 +17,17 @@ class Review extends Model
         'comment',
     ];
 
+    public function saveReview($request)
+    {
+        $this->user_id =  1; //テスト用
+        $this->shop_id = $request->shop_id;
+        $this->rating = $request->rating;
+        $this->comment = $request->comment;
+        $this->save();
+
+        return $this;
+    }
+
     // Shopモデルとのリレーション
     public function shop()
     {

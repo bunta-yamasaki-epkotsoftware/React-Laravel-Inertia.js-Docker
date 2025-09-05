@@ -4,6 +4,7 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
+import MainLayout from '@/Layouts/MainLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
 
 export default function Login({ status, canResetPassword }) {
@@ -98,3 +99,5 @@ export default function Login({ status, canResetPassword }) {
         </GuestLayout>
     );
 }
+
+Login.layout = (page) => <MainLayout children={page} title="ログイン" />;

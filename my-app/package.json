@@ -2,8 +2,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "CHOKIDAR_USEPOLLING=1 vite",
-        "build": "vite build"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "devDependencies": {
         "@headlessui/react": "^2.0.0",
